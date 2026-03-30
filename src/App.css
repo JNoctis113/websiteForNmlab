@@ -1,0 +1,101 @@
+/* --- 基礎設定 --- */
+:root {
+  --cyan: #00f2fe;
+  --magenta: #ff00de;
+  --dark-bg: #03001c;
+  --text: #e0e0ff;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--dark-bg);
+  font-family: 'Fira Code', monospace;
+}
+
+/* 背景裝飾 */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: -1;
+}
+.circle-top { width: 300px; height: 300px; background: #6366f1; top: 10%; left: 10%; }
+.circle-bottom { width: 250px; height: 250px; background: #a855f7; bottom: 10%; right: 10%; }
+
+/* 主面板 */
+.container-panel {
+  background: rgba(10, 10, 35, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  max-width: 700px;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.name-title {
+  font-size: 3rem;
+  color: white;
+  margin: 0;
+}
+
+.nickname-tag {
+  color: var(--text);
+  opacity: 0.8;
+  border-left: 4px solid var(--magenta);
+  padding-left: 15px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* 介紹卡片 */
+.intro-card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.status-line { color: var(--cyan); font-weight: bold; margin-bottom: 1rem; }
+.bio-text { color: #cbd5e1; line-height: 1.8; }
+.highlight { color: var(--cyan); font-weight: bold; }
+
+/* 標籤 */
+.tag-group { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.skill-tag {
+  border: 1px solid var(--magenta);
+  color: var(--magenta);
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+/* 按鈕 */
+.connect-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 12px 30px;
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.connect-btn:hover {
+  background: var(--cyan);
+  color: var(--dark-bg);
+  box-shadow: 0 0 20px var(--cyan);
+}
